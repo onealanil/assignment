@@ -1,10 +1,9 @@
-/**
- * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially useful
- * for Docker builds.
- */
-import "./src/env.js";
+// next.config.js
 
-/** @type {import("next").NextConfig} */
-const config = {};
+import { env } from './src/env'; // Ensure you are importing the validated environment variables
 
-export default config;
+export default {
+  env: {
+    DATABASE_URL: env.DATABASE_URL,  // Pass DATABASE_URL to your app
+  },
+};
