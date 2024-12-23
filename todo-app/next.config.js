@@ -1,6 +1,6 @@
 // next.config.js
 
-import { env } from './src/env'; // Ensure you are importing the validated environment variables
+import { env } from './src/env.js'; // Ensure you are importing the validated environment variables
 
 export default {
   env: {
